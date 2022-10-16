@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 <body>
   <div id="container">
@@ -71,6 +71,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2022-10-16-每日一题-day01-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/" class="article-date">
+  <time class="dt-published" datetime="2022-10-16T13:07:22.000Z" itemprop="datePublished">2022-10-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/">每日一题 day01/10</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Proof $\int_0^\infty \sin(x^2) dx &#x3D; \int_0^\infty \cos(x^2) &#x3D; \frac{\sqrt{2\pi}}4$.</p>
+<p>Let $e^{-z^2}$ integrate on the contour $\gamma &#x3D; \gamma_1 + \gamma_2 - \gamma_3$,<br>$\gamma_1: z &#x3D; t, 0 \le 0 \le R$,<br>$\gamma_2: z &#x3D; Re^{it}, 0\le t \le \frac{\pi}4$,<br>$\gamma_3: z &#x3D; te^{i\frac\pi4}, 0 &lt; t &lt; R$</p>
+<p>Then by Cauchy theorem, $\int_\gamma e^{-z^2} &#x3D; 0$.<br>That is<br>$$<br>\int_0^R e^{-t^2} dt + \int_{\gamma_2} e^{-z^2}dz  &#x3D; \int_{\gamma_3} e^{-z^2} dz<br>$$<br>Let $R \to \infty$, $\int_{\gamma_2} e^{-z^2}dz \le \frac{R}{e^{R^2}} \to 0$<br>Hence,<br>$$<br>\int_0^\infty e^{-t^2} dt &#x3D; \int_{0}^\infty e^{-it^2}e^{i\frac\pi4}dt<br>$$<br>By Euler’s formula,<br>$$<br>    \frac{\sqrt{\pi}}2 &#x3D; (\frac{\sqrt2}2 + i \frac{\sqrt2} 2)(\int \cos(x^2) - i \int \sin(x^2))<br>$$<br>as desired.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/" data-id="cl9beb23l0009zcux2l0q4abc" data-title="每日一题 day01/10" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/complex-analysis/" rel="tag">complex-analysis</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2022-10-15-符号检验" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/" class="article-date">
@@ -94,29 +137,19 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>假设现在有一个大小为 $n$ 的样本 $X_1, …, X_n$ 来自分布 $F$, 需要检验 $F$ 中位数是否为 $M_0$, 此时可以使用符号检验，其方法如下。</p>
-<p>首先记分布 $F$ 的中位数为 $M_F$, 假设为</p>
-<script type="math/tex; mode=display">
-H_0: M_F = M_0 \leftrightarrow H_1: M_F \neq M_0</script><p>在原假设成立下，样本 $X_1, …, X_n$ 应该会均匀分布在 $M_0$ 两侧，定义统计量 $n^+ = \sum I(X_i &gt; M_0)$, $n^+$ 代表样本落在 $M_0$ 右侧的数量，类似地定义 $n^- = \sum I(X_i &lt; M_0)$, 由于 $X_i$ 落在 $M_0$ 两侧的概率相等，也就是 $I(X_i &gt; M_0) \sim B(1, \frac12)$, 那么，$n^+, n^- \sim B(n, \frac12)$. </p>
-<p>从而定义检验统计量 $S = min(n^+, n^-) \sim B(n, \frac12)$, 利用 $p$ 值给出拒绝域，给定置信水平 $\alpha$, $p$ 值的计算如下，</p>
-<script type="math/tex; mode=display">
-\begin{align}
-p &= 2P(S \le S^\star | H_0) \\\\
-     &= 2\sum_{i=0}^{S^\star} {n \choose i} {\frac12}^n
-\end{align}</script><p>其中，第一个等号右侧 $S$ 是一个服从二项分布 $B(n, \frac12)$ 的随机变量，而 $S^\star$ 是由真实数据计算的 $S = min(n^+, n^-)$ 的值。<br>当 $p &lt; \alpha$ 时，拒绝原假设；否则不拒绝原假设。</p>
-<p>Remark:</p>
-<pre><code>1. 符号检验不需要假设分布 $F$ 的具体形式，
-当 $F$ 的分布已知时，我个人不建议用符号检验，可以换用更精细的检验；
-2. 以上的符号检验是双边的，可以进行单边的符号检验；
-3. 王星，《非参数统计》（第 3 版）第 2.1 节介绍的符号检验与上述检验略有不同，
-主要是 $p$ 值的计算，第二个等号的求和上限换为 $n^+ + n^-$;
-4. 以上介绍的符号检验可以用于小样本的检验，大样本情况下，可以用极限定理来简化计算，具体形式如下，
-</code></pre><p>当 $n$ 很大，$\frac{S - \frac n2}{\sqrt{\frac n4}} \sim N(0, 1)$,<br>此时 $p$ 值为 $p = 2P(S \le S^\star | H_0) = 2 F\left(\frac{S^\star - \frac n2}{\sqrt{\frac n4}}\right)$, 这里 $F$ 是标准正态分布的分布函数。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">data &lt;- c(36, 32, 31, 25, 28, 36, 40, 32, </span><br><span class="line">          41, 26, 35, 35, 32, 87, 33, 35)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">median_sign_test &lt;- function(x, M0 = 0, alpha = 0.05)&#123;</span><br><span class="line">  S_p &lt;- sum(x &gt; M0) # S positive</span><br><span class="line">  S_n &lt;- sum(x &lt; M0) # S negative</span><br><span class="line">  S &lt;- S_p * (S_p &lt;= S_n) + S_n * (S_p &gt; S_n)</span><br><span class="line">  n &lt;- S_p + S_n</span><br><span class="line">  p &lt;- sum(2 * choose(n, 0:S)) * 1/2^n</span><br><span class="line">  if(p &lt;= alpha)&#123;</span><br><span class="line">    cat(&quot;Given alpha = &quot;, alpha, &#x27;\n&#x27;,</span><br><span class="line">        &quot;H0: M = &quot;, M0, &#x27;\n&#x27;,</span><br><span class="line">        &quot;p = &quot;, p, &#x27;\n&#x27;,</span><br><span class="line">        &quot;p &lt;= alpha, reject H0&quot;)</span><br><span class="line">  &#125;</span><br><span class="line">  else&#123;</span><br><span class="line">    cat(&quot;Given alpha = &quot;, alpha, &#x27;\n&#x27;,</span><br><span class="line">        &quot;H0: M = &quot;, M0, &#x27;\n&#x27;,</span><br><span class="line">        &quot;p = &quot;, p, &#x27;\n&#x27;,</span><br><span class="line">        &quot;p &gt; alpha, can not reject H0&quot;)</span><br><span class="line">    </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">median_sign_test(data, M0 = 37)</span><br><span class="line"># output</span><br><span class="line"># Given alpha = 0.05</span><br><span class="line"># H0: M = 37</span><br><span class="line"># p = 0.02127075</span><br><span class="line"># p &lt;= alpha, reject H0</span><br><span class="line"></span><br><span class="line"># 上面是我自己写的</span><br><span class="line"># 或者直接调函数, 结果也差不多</span><br><span class="line">binom.test(sum(data &lt; 37), length(data), 0.5)</span><br><span class="line"># 这函数还挺有意思的，比我写的确实好</span><br></pre></td></tr></table></figure>
+<p>首先记分布 $F$ 的中位数为 $M_F$, 假设为<br>$$<br>H_0: M_F &#x3D; M_0 \leftrightarrow H_1: M_F \neq M_0<br>$$<br>在原假设成立下，样本 $X_1, …, X_n$ 应该会均匀分布在 $M_0$ 两侧，定义统计量 $n^+ &#x3D; \sum I(X_i &gt; M_0)$, $n^+$ 代表样本落在 $M_0$ 右侧的数量，类似地定义 $n^- &#x3D; \sum I(X_i &lt; M_0)$, 由于 $X_i$ 落在 $M_0$ 两侧的概率相等，也就是 $I(X_i &gt; M_0) \sim B(1, \frac12)$, 那么，$n^+, n^- \sim B(n, \frac12)$. </p>
+<p>从而定义检验统计量 $S &#x3D; min(n^+, n^-) \sim B(n, \frac12)$, 利用 $p$ 值给出拒绝域，给定置信水平 $\alpha$, $p$ 值的计算如下，<br>$$<br>\begin{align}<br>p &amp;&#x3D; 2P(S \le S^\star | H_0) \\<br>     &amp;&#x3D; 2\sum_{i&#x3D;0}^{S^\star} {n \choose i} {\frac12}^n<br>\end{align}<br>$$<br>其中，第一个等号右侧 $S$ 是一个服从二项分布 $B(n, \frac12)$ 的随机变量，而 $S^\star$ 是由真实数据计算的 $S &#x3D; min(n^+, n^-)$ 的值。<br>当 $p &lt; \alpha$ 时，拒绝原假设；否则不拒绝原假设。</p>
+<p>Remark:<br>    1. 符号检验不需要假设分布 $F$ 的具体形式，<br>    当 $F$ 的分布已知时，我个人不建议用符号检验，可以换用更精细的检验；<br>    2. 以上的符号检验是双边的，可以进行单边的符号检验；<br>    3. 王星，《非参数统计》（第 3 版）第 2.1 节介绍的符号检验与上述检验略有不同，<br>    主要是 $p$ 值的计算，第二个等号的求和上限换为 $n^+ + n^-$;<br>    4. 以上介绍的符号检验可以用于小样本的检验，大样本情况下，可以用极限定理来简化计算，具体形式如下，</p>
+<p>当 $n$ 很大，$\frac{S - \frac n2}{\sqrt{\frac n4}} \sim N(0, 1)$,<br>此时 $p$ 值为 $p &#x3D; 2P(S \le S^\star | H_0) &#x3D; 2 F\left(\frac{S^\star - \frac n2}{\sqrt{\frac n4}}\right)$, 这里 $F$ 是标准正态分布的分布函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"># R </span><br><span class="line"># author: xzm</span><br><span class="line"># date: 2022-10-15</span><br><span class="line"># implementation of sign test</span><br><span class="line">data &lt;- c(36, 32, 31, 25, 28, 36, 40, 32, </span><br><span class="line">          41, 26, 35, 35, 32, 87, 33, 35)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">median_sign_test &lt;- function(x, M0 = 0, alpha = 0.05)&#123;</span><br><span class="line">  S_p &lt;- sum(x &gt; M0) # S positive</span><br><span class="line">  S_n &lt;- sum(x &lt; M0) # S negative</span><br><span class="line">  S &lt;- S_p * (S_p &lt;= S_n) + S_n * (S_p &gt; S_n)</span><br><span class="line">  n &lt;- S_p + S_n</span><br><span class="line">  p &lt;- sum(2 * choose(n, 0:S)) * 1/2^n</span><br><span class="line">  if(p &lt;= alpha)&#123;</span><br><span class="line">    cat(&quot;Given alpha = &quot;, alpha, &#x27;\n&#x27;,</span><br><span class="line">        &quot;H0: M = &quot;, M0, &#x27;\n&#x27;,</span><br><span class="line">        &quot;p = &quot;, p, &#x27;\n&#x27;,</span><br><span class="line">        &quot;p &lt;= alpha, reject H0&quot;)</span><br><span class="line">  &#125;</span><br><span class="line">  else&#123;</span><br><span class="line">    cat(&quot;Given alpha = &quot;, alpha, &#x27;\n&#x27;,</span><br><span class="line">        &quot;H0: M = &quot;, M0, &#x27;\n&#x27;,</span><br><span class="line">        &quot;p = &quot;, p, &#x27;\n&#x27;,</span><br><span class="line">        &quot;p &gt; alpha, can not reject H0&quot;)</span><br><span class="line">    </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">median_sign_test(data, M0 = 37)</span><br><span class="line"># output</span><br><span class="line"># Given alpha = 0.05</span><br><span class="line"># H0: M = 37</span><br><span class="line"># p = 0.02127075</span><br><span class="line"># p &lt;= alpha, reject H0</span><br><span class="line"></span><br><span class="line"># 上面是我自己写的</span><br><span class="line"># 或者直接调函数, 结果也差不多</span><br><span class="line">binom.test(sum(data &lt; 37), length(data), 0.5)</span><br><span class="line"># 这函数还挺有意思的，比我写的确实好</span><br></pre></td></tr></table></figure>
+
+
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/" data-id="cl99rukl10007lwuxft09ekg0" data-title="符号检验" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/" data-id="cl9beb23j0005zcuxc9vvaeoe" data-title="符号检验" class="article-share-link">Share</a>
       
       
       
@@ -157,7 +190,7 @@ p &= 2P(S \le S^\star | H_0) \\\\
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/15/2022-10-15-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%8D%81%E5%A4%A9%E8%AE%A1%E5%88%92/" data-id="cl99rukkj0003lwux3kjtgu08" data-title="每日一题 十天计划" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/15/2022-10-15-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%8D%81%E5%A4%A9%E8%AE%A1%E5%88%92/" data-id="cl9beb23i0004zcuxhbw4bivj" data-title="每日一题 十天计划" class="article-share-link">Share</a>
       
       
       
@@ -194,25 +227,13 @@ p &= 2P(S \le S^\star | H_0) \\\\
         <blockquote>
 <p>Proof Laplace transform of renewal equation</p>
 </blockquote>
-<p>Apply Laplace transform of the renewal equation,</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\int_0^\infty e^{-st}M(t) dt &= \int_0^\infty e^{-st}F(t) dt + \int_0^\infty \int_0^t e^{-st} M(t-y) d F(y) dt\\
-\end{aligned}</script><p>Denote left hand side as $\mathcal{L}[M(t)]$, </p>
-<script type="math/tex; mode=display">
-\begin{align}
-\int_{0}^\infty \int_0^t e^{-st} M(t-y) dF(y) dt &= \int_0^\infty e^{-st} dt\int_{0}^t M(t-y) f(y) dy \\\\
-        &= \int_0^\infty f(y)dy \int_{y}^\infty e^{-st} M(t-y) dt \\\\
-        &= \int_0^\infty e^{-sy}f(y)dy \mathcal{L}[M(t)] \\\\
-        &= \mathcal{L}[f(t)] \mathcal{L}[M(t)] \\\\
-\end{align}</script><p>Hence,</p>
-<script type="math/tex; mode=display">
-    \mathcal{L}[M(t)] = \frac{\mathcal{L}[F(t)]}{1 - \mathcal{L}[f(t)] }</script><p>Then alpply inverse Lalapce transform, $M(t)$ is derived.</p>
+<p>Apply Laplace transform of the renewal equation,<br>$$<br>\begin{aligned}<br>\int_0^\infty e^{-st}M(t) dt &amp;&#x3D; \int_0^\infty e^{-st}F(t) dt + \int_0^\infty \int_0^t e^{-st} M(t-y) d F(y) dt\<br>\end{aligned}<br>$$</p>
+<p>Denote left hand side as $\mathcal{L}[M(t)]$,<br>$$<br>\begin{align}<br>\int_{0}^\infty \int_0^t e^{-st} M(t-y) dF(y) dt &amp;&#x3D; \int_0^\infty e^{-st} dt\int_{0}^t M(t-y) f(y) dy \\<br>        &amp;&#x3D; \int_0^\infty f(y)dy \int_{y}^\infty e^{-st} M(t-y) dt \\<br>        &amp;&#x3D; \int_0^\infty e^{-sy}f(y)dy \mathcal{L}[M(t)] \\<br>        &amp;&#x3D; \mathcal{L}[f(t)] \mathcal{L}[M(t)] \\<br>\end{align}<br>$$<br>Hence,<br>$$<br>    \mathcal{L}[M(t)] &#x3D; \frac{\mathcal{L}[F(t)]}{1 - \mathcal{L}[f(t)] }<br>$$<br>Then alpply inverse Lalapce transform, $M(t)$ is derived.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/15/2022-10-15-Laplace-transfrom-of-renewal-equation/" data-id="cl99rukki0002lwux2qxwai7s" data-title="Laplace transfrom of renewal equation" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/15/2022-10-15-Laplace-transfrom-of-renewal-equation/" data-id="cl9beb23e0001zcux0hnch3ey" data-title="Laplace transfrom of renewal equation" class="article-share-link">Share</a>
       
       
       
@@ -248,7 +269,9 @@ p &= 2P(S \le S^\star | H_0) \\\\
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>How to write a blog post on my computer?<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cd &quot;your blog project&quot;</span><br><span class="line">$ hexo new &quot;blog post file name&quot;</span><br><span class="line">$ vim &quot;blog post file name&quot;</span><br><span class="line">## note: if mathjax is needed, add &quot;mathjax: true&quot; to your md file</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo g ## g for henerate</span><br><span class="line">$ hexo s ## s for server and hexo is running at https://localhost:4000/</span><br><span class="line">$ hexo d ## deploy to gitpages</span><br></pre></td></tr></table></figure></p>
+        <p>How to write a blog post on my computer?</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cd &quot;your blog project&quot;</span><br><span class="line">$ hexo new &quot;blog post file name&quot;</span><br><span class="line">$ vim &quot;blog post file name&quot;</span><br><span class="line">## note: if mathjax is needed, add &quot;mathjax: true&quot; to your md file</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo g ## g for henerate</span><br><span class="line">$ hexo s ## s for server and hexo is running at https://localhost:4000/</span><br><span class="line">$ hexo d ## deploy to gitpages</span><br></pre></td></tr></table></figure>
+
 <p>Reference:</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv12633102?from=search">https://www.bilibili.com/read/cv12633102?from=search</a></li>
@@ -257,7 +280,7 @@ p &= 2P(S \le S^\star | H_0) \\\\
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/09/2022-10-09-blog-writting-md/" data-id="cl99rukkg0001lwuxgmei785w" data-title="blog writting" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/09/2022-10-09-blog-writting-md/" data-id="cl9beb23g0002zcux35o9a7sq" data-title="blog writting" class="article-share-link">Share</a>
       
       
       
@@ -292,85 +315,44 @@ p &= 2P(S \le S^\star | H_0) \\\\
     <div class="e-content article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>$1.$ 设 $A_i, i=1,\cdots,n$ 是事件，证明:</p>
-<script type="math/tex; mode=display">P\left( \bigcup_{i=1}^n A_i \right) 
-\ge \frac{\left( \sum\limits_{i=1}^n P(A_i) \right)^2 }{\sum\limits_{i=1}^n P(A_i) + 2\sum\limits_{i<j} P(A_i A_j) }</script></blockquote>
+<p>$1.$ 设 $A_i, i&#x3D;1,\cdots,n$ 是事件，证明:</p>
+<p>$$ P\left( \bigcup_{i&#x3D;1}^n A_i \right)<br>\ge \frac{\left( \sum\limits_{i&#x3D;1}^n P(A_i) \right)^2 }{\sum\limits_{i&#x3D;1}^n P(A_i) + 2\sum\limits_{i&lt;j} P(A_i A_j) } $$ </p>
+</blockquote>
 <p>我在 MSE 上提问了<a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/4353183/a-probability-inequality-of-events">这题</a>，解答来自印度老哥 StubbornAtom.</p>
-<p>他只给出了 $n=2$ 时的做法，我在这里给出完整证明。</p>
-<p>注意到</p>
-<script type="math/tex; mode=display">EI_{A_i} = P(A_i)</script><p>其中 $I_{A_i}$ 为 $A_i$ 的示性函数。</p>
+<p>他只给出了 $n&#x3D;2$ 时的做法，我在这里给出完整证明。</p>
+<p>注意到<br>$$ EI_{A_i} &#x3D; P(A_i) $$<br>其中 $I_{A_i}$ 为 $A_i$ 的示性函数。</p>
 <p>不难验证，(1) 式左侧</p>
-<script type="math/tex; mode=display">
-\begin{align}
-P(\cup_{i=1}^n A_i) &= EI_{\cup_{i=1}^n A_i} \\\\
-&= EI^2_{\cup_{i=1}^n A_i} \\\\
-\end{align}</script><p>(1) 式右侧分子</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\left( \sum P(A_i) \right)^2 &= \left( \sum EI_{A_i} \right)^2  \\\\
-&= \left( E\sum I_{A_i}  \right)^2  \\\\
-\end{aligned}</script><p>(1) 式右侧分母</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\sum\limits_{i=1}^n P(A_i) + 2\sum\limits_{i<j} P(A_i A_j) &= \sum EI_{A_i} + 2\sum_{i<j} EI_{A_i \cap A_j} \\\\
-&=\sum EI^2_{A_i} + 2\sum_{i<j} EI_{A_i} I_{A_j} \\\\
-&= E(\sum I_{A_i})^2
-\end{aligned}</script><p>由 Cauchy-Schwarz 不等式，</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-EI^2_{\cup_{i=1}^n A_i} E(\sum I_{A_i})^2 &\ge \left(E\sum I_{\cup_{j=1}^n A_j} I_{A_i} \right)^2 \\\\
-&= \left( E\sum I_{A_i} \right)^2 \\
-\end{aligned}</script><hr>
+<p>$$<br>\begin{align}<br>P(\cup_{i&#x3D;1}^n A_i) &amp;&#x3D; EI_{\cup_{i&#x3D;1}^n A_i} \\<br>&amp;&#x3D; EI^2_{\cup_{i&#x3D;1}^n A_i} \\<br>\end{align}<br>$$</p>
+<p>(1) 式右侧分子</p>
+<p>$$<br>\begin{aligned}<br>\left( \sum P(A_i) \right)^2 &amp;&#x3D; \left( \sum EI_{A_i} \right)^2  \\<br>&amp;&#x3D; \left( E\sum I_{A_i}  \right)^2  \\<br>\end{aligned}<br>$$</p>
+<p>(1) 式右侧分母</p>
+<p>$$<br>\begin{aligned}<br>\sum\limits_{i&#x3D;1}^n P(A_i) + 2\sum\limits_{i&lt;j} P(A_i A_j) &amp;&#x3D; \sum EI_{A_i} + 2\sum_{i&lt;j} EI_{A_i \cap A_j} \\<br>&amp;&#x3D;\sum EI^2_{A_i} + 2\sum_{i&lt;j} EI_{A_i} I_{A_j} \\<br>&amp;&#x3D; E(\sum I_{A_i})^2<br>\end{aligned}<br>$$</p>
+<p>由 Cauchy-Schwarz 不等式，</p>
+<p>$$<br>\begin{aligned}<br>EI^2_{\cup_{i&#x3D;1}^n A_i} E(\sum I_{A_i})^2 &amp;\ge \left(E\sum I_{\cup_{j&#x3D;1}^n A_j} I_{A_i} \right)^2 \\<br>&amp;&#x3D; \left( E\sum I_{A_i} \right)^2 \<br>\end{aligned}<br>$$</p>
+<hr>
 <blockquote>
-<p>$2.$ 设随机变量 $X,Y$ 独立同分布，期望为 $0$, 方差为 $1$, $X-Y,X+Y$ 相互独立，证明：</p>
-<script type="math/tex; mode=display">
-   \begin{align}
-   X,Y \sim N(0,1)
-   \end{align}</script></blockquote>
+<p>$2.$ 设随机变量 $X,Y$ 独立同分布，期望为 $0$, 方差为 $1$, $X-Y,X+Y$ 相互独立，证明：<br>   $$<br>   \begin{align}<br>   X,Y \sim N(0,1)<br>   \end{align}<br>   $$</p>
+</blockquote>
 <p>设 $X,Y$ 的特征函数为 $f(t)$,  则</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&f_{X+Y}(t) = f^2(t) \\\\
-&f_{X-Y}(t) = f(t)f(-t)
-\end{aligned}</script><p>而</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-f_{X+Y}(t) &= f(2t)\\\\
-f_{2X}(t) &= f(2t)
-\end{aligned}</script><p>再注意到</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-f_{2X}(t) &= f_{X-Y+X+Y} (t) \\\\
-&=f^3 (t) f(-t)
-\end{aligned}</script><p>从而 $f(2t) = f^3(t) f(-t)$, 并且 $f(-2t) = f^3(-t) f(t)$.</p>
+<p>$$<br>\begin{aligned}<br>&amp;f_{X+Y}(t) &#x3D; f^2(t) \\<br>&amp;f_{X-Y}(t) &#x3D; f(t)f(-t)<br>\end{aligned}<br>$$</p>
+<p>而</p>
+<p>$$<br>\begin{aligned}<br>f_{X+Y}(t) &amp;&#x3D; f(2t)\\<br>f_{2X}(t) &amp;&#x3D; f(2t)<br>\end{aligned}<br>$$</p>
+<p>再注意到</p>
+<p>$$<br>\begin{aligned}<br>f_{2X}(t) &amp;&#x3D; f_{X-Y+X+Y} (t) \\<br>&amp;&#x3D;f^3 (t) f(-t)<br>\end{aligned}<br>$$</p>
+<p>从而 $f(2t) &#x3D; f^3(t) f(-t)$, 并且 $f(-2t) &#x3D; f^3(-t) f(t)$.</p>
 <p>上面两式相除，得 </p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\frac{f(2t)}{f(-2t)} = \left( \frac{f(t)}{f(-t)} \right)^2 
-\end{aligned}</script><p>利用上式迭代，并注意到 $f(t) = 1 - \frac12 t^2 + o(t^2)$,</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\frac{f(t)}{f(-t)} &= \left( \frac{f(\frac12 t)}{f(-\frac12 t)} \right)^2 \\\\
-&=\left( \frac{f(\frac t{2^n} )}{f(-\frac{t}{2^n})} \right)^{2^n} \\\\
-&= \lim_{n\to\infty} \left( \frac{f(\frac tn)}{f(-\frac tn)} \right)^n \\\\
-&=\lim_{n\to\infty} \left( \frac{1+o(\frac1n)}{1-o(\frac1n)} \right)^n \\\\
-&= \lim_{n\to\infty} (1+o(\frac1n))^n\\\\
-&=1
-\end{aligned}</script><p>所以，$f(t) = f(-t)$, 从而 $f(2t) = f^4 (t)$.</p>
+<p>$$<br>\begin{aligned}<br>\frac{f(2t)}{f(-2t)} &#x3D; \left( \frac{f(t)}{f(-t)} \right)^2<br>\end{aligned}<br>$$</p>
+<p>利用上式迭代，并注意到 $f(t) &#x3D; 1 - \frac12 t^2 + o(t^2)$,</p>
+<p>$$<br>\begin{aligned}<br>\frac{f(t)}{f(-t)} &amp;&#x3D; \left( \frac{f(\frac12 t)}{f(-\frac12 t)} \right)^2 \\<br>&amp;&#x3D;\left( \frac{f(\frac t{2^n} )}{f(-\frac{t}{2^n})} \right)^{2^n} \\<br>&amp;&#x3D; \lim_{n\to\infty} \left( \frac{f(\frac tn)}{f(-\frac tn)} \right)^n \\<br>&amp;&#x3D;\lim_{n\to\infty} \left( \frac{1+o(\frac1n)}{1-o(\frac1n)} \right)^n \\<br>&amp;&#x3D; \lim_{n\to\infty} (1+o(\frac1n))^n\\<br>&amp;&#x3D;1<br>\end{aligned}<br>$$</p>
+<p>所以，$f(t) &#x3D; f(-t)$, 从而 $f(2t) &#x3D; f^4 (t)$.</p>
 <p>再次迭代，</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-f(t) &= f^4(\frac12 t) \\\\
-&= f^{4^n}(\frac t{2^n}) \\\\
-&=\lim_{n\to\infty} f^{4^n} (\frac t{2^n}) \\\\
-&=\lim_{n\to\infty} (1-\frac{t^2}{2^{2n+1}} + o(\frac{t^2}{4^n}))^{4^n} \\\\
-&={\rm e}^{-\frac12 t^2}
-\end{aligned}</script><p>由连续性定理，即证$X,Y\sim N(0,1)$.</p>
+<p>$$<br>\begin{aligned}<br>f(t) &amp;&#x3D; f^4(\frac12 t) \\<br>&amp;&#x3D; f^{4^n}(\frac t{2^n}) \\<br>&amp;&#x3D;\lim_{n\to\infty} f^{4^n} (\frac t{2^n}) \\<br>&amp;&#x3D;\lim_{n\to\infty} (1-\frac{t^2}{2^{2n+1}} + o(\frac{t^2}{4^n}))^{4^n} \\<br>&amp;&#x3D;{\rm e}^{-\frac12 t^2}<br>\end{aligned}<br>$$</p>
+<p>由连续性定理，即证$X,Y\sim N(0,1)$.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/09/2022-10-09-21Spring-final-exam/" data-id="cl99rukkb0000lwux683sboxb" data-title="概率论21年秋期末考试题" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/09/2022-10-09-21Spring-final-exam/" data-id="cl9beb2380000zcux4ux84zgi" data-title="概率论21年秋期末考试题" class="article-share-link">Share</a>
       
       
       
@@ -406,18 +388,22 @@ f(t) &= f^4(\frac12 t) \\\\
       
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/09/hello-world/" data-id="cl99rukl00006lwuxbjj46pc5" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/09/hello-world/" data-id="cl9beb23k0006zcux6pobdeyu" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -442,7 +428,7 @@ f(t) &= f^4(\frac12 t) \\\\
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/nonparametric-statistics/" rel="tag">nonparametric-statistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stochastic-process/" rel="tag">stochastic-process</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/complex-analysis/" rel="tag">complex-analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nonparametric-statistics/" rel="tag">nonparametric-statistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stochastic-process/" rel="tag">stochastic-process</a></li></ul>
     </div>
   </div>
 
@@ -452,7 +438,7 @@ f(t) &= f^4(\frac12 t) \\\\
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/nonparametric-statistics/" style="font-size: 10px;">nonparametric-statistics</a> <a href="/tags/stochastic-process/" style="font-size: 10px;">stochastic-process</a>
+      <a href="/tags/complex-analysis/" style="font-size: 10px;">complex-analysis</a> <a href="/tags/nonparametric-statistics/" style="font-size: 10px;">nonparametric-statistics</a> <a href="/tags/stochastic-process/" style="font-size: 10px;">stochastic-process</a>
     </div>
   </div>
 
@@ -474,6 +460,10 @@ f(t) &= f^4(\frac12 t) \\\\
       <ul>
         
           <li>
+            <a href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/">每日一题 day01/10</a>
+          </li>
+        
+          <li>
             <a href="/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/">符号检验</a>
           </li>
         
@@ -487,10 +477,6 @@ f(t) &= f^4(\frac12 t) \\\\
         
           <li>
             <a href="/2022/10/09/2022-10-09-blog-writting-md/">blog writting</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/09/2022-10-09-21Spring-final-exam/">概率论21年秋期末考试题</a>
           </li>
         
       </ul>

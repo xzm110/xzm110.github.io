@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Tag: nonparametric-statistics | Hexo</title>
+  <title>每日一题 day01/10 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/nonparametric-statistics/index.html">
+  <meta name="description" content="Proof $\int_0^\infty \sin(x^2) dx &#x3D; \int_0^\infty \cos(x^2) &#x3D; \frac{\sqrt{2\pi}}4$. Let $e^{-z^2}$ integrate on the contour $\gamma &#x3D; \gamma_1 + \gamma_2 - \gamma_3$,$\gamma_1: z &#x3D;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日一题 day01&#x2F;10">
+<meta property="og:url" content="http://example.com/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Proof $\int_0^\infty \sin(x^2) dx &#x3D; \int_0^\infty \cos(x^2) &#x3D; \frac{\sqrt{2\pi}}4$. Let $e^{-z^2}$ integrate on the contour $\gamma &#x3D; \gamma_1 + \gamma_2 - \gamma_3$,$\gamma_1: z &#x3D;">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-10-16T13:07:22.000Z">
+<meta property="article:modified_time" content="2022-10-16T13:41:51.740Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="complex-analysis">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -69,39 +74,57 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-10-15T08:19:24.000Z" itemprop="datePublished">Oct 15</time>
+        <section id="main"><article id="post-2022-10-16-每日一题-day01-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/" class="article-date">
+  <time class="dt-published" datetime="2022-10-16T13:07:22.000Z" itemprop="datePublished">2022-10-16</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/">符号检验</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      每日一题 day01/10
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Proof $\int_0^\infty \sin(x^2) dx &#x3D; \int_0^\infty \cos(x^2) &#x3D; \frac{\sqrt{2\pi}}4$.</p>
+<p>Let $e^{-z^2}$ integrate on the contour $\gamma &#x3D; \gamma_1 + \gamma_2 - \gamma_3$,<br>$\gamma_1: z &#x3D; t, 0 \le 0 \le R$,<br>$\gamma_2: z &#x3D; Re^{it}, 0\le t \le \frac{\pi}4$,<br>$\gamma_3: z &#x3D; te^{i\frac\pi4}, 0 &lt; t &lt; R$</p>
+<p>Then by Cauchy theorem, $\int_\gamma e^{-z^2} &#x3D; 0$.<br>That is<br>$$<br>\int_0^R e^{-t^2} dt + \int_{\gamma_2} e^{-z^2}dz  &#x3D; \int_{\gamma_3} e^{-z^2} dz<br>$$<br>Let $R \to \infty$, $\int_{\gamma_2} e^{-z^2}dz \le \frac{R}{e^{R^2}} \to 0$<br>Hence,<br>$$<br>\int_0^\infty e^{-t^2} dt &#x3D; \int_{0}^\infty e^{-it^2}e^{i\frac\pi4}dt<br>$$<br>By Euler’s formula,<br>$$<br>    \frac{\sqrt{\pi}}2 &#x3D; (\frac{\sqrt2}2 + i \frac{\sqrt2} 2)(\int \cos(x^2) - i \int \sin(x^2))<br>$$<br>as desired.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/" data-id="cl9beb23l0009zcux2l0q4abc" data-title="每日一题 day01/10" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/complex-analysis/" rel="tag">complex-analysis</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">符号检验</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>

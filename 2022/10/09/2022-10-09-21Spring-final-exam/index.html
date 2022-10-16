@@ -6,12 +6,12 @@
   
   <title>概率论21年秋期末考试题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="$1.$ 设 $A_i, i&#x3D;1,\cdots,n$ 是事件，证明: P\left( \bigcup_{i&#x3D;1}^n A_i \right)  \ge \frac{\left( \sum\limits_{i&#x3D;1}^n P(A_i) \right)^2 }{\sum\limits_{i&#x3D;1}^n P(A_i) + 2\sum\limits_{i">
+  <meta name="description" content="$1.$ 设 $A_i, i&#x3D;1,\cdots,n$ 是事件，证明: $$ P\left( \bigcup_{i&#x3D;1}^n A_i \right)\ge \frac{\left( \sum\limits_{i&#x3D;1}^n P(A_i) \right)^2 }{\sum\limits_{i&#x3D;1}^n P(A_i) + 2\sum\limits_{i&lt;j}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="概率论21年秋期末考试题">
 <meta property="og:url" content="http://example.com/2022/10/09/2022-10-09-21Spring-final-exam/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="$1.$ 设 $A_i, i&#x3D;1,\cdots,n$ 是事件，证明: P\left( \bigcup_{i&#x3D;1}^n A_i \right)  \ge \frac{\left( \sum\limits_{i&#x3D;1}^n P(A_i) \right)^2 }{\sum\limits_{i&#x3D;1}^n P(A_i) + 2\sum\limits_{i">
+<meta property="og:description" content="$1.$ 设 $A_i, i&#x3D;1,\cdots,n$ 是事件，证明: $$ P\left( \bigcup_{i&#x3D;1}^n A_i \right)\ge \frac{\left( \sum\limits_{i&#x3D;1}^n P(A_i) \right)^2 }{\sum\limits_{i&#x3D;1}^n P(A_i) + 2\sum\limits_{i&lt;j}">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-09T07:48:37.450Z">
 <meta property="article:modified_time" content="2022-10-09T09:10:16.543Z">
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 <body>
   <div id="container">
@@ -96,85 +96,44 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>$1.$ 设 $A_i, i=1,\cdots,n$ 是事件，证明:</p>
-<script type="math/tex; mode=display">P\left( \bigcup_{i=1}^n A_i \right) 
-\ge \frac{\left( \sum\limits_{i=1}^n P(A_i) \right)^2 }{\sum\limits_{i=1}^n P(A_i) + 2\sum\limits_{i<j} P(A_i A_j) }</script></blockquote>
+<p>$1.$ 设 $A_i, i&#x3D;1,\cdots,n$ 是事件，证明:</p>
+<p>$$ P\left( \bigcup_{i&#x3D;1}^n A_i \right)<br>\ge \frac{\left( \sum\limits_{i&#x3D;1}^n P(A_i) \right)^2 }{\sum\limits_{i&#x3D;1}^n P(A_i) + 2\sum\limits_{i&lt;j} P(A_i A_j) } $$ </p>
+</blockquote>
 <p>我在 MSE 上提问了<a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/4353183/a-probability-inequality-of-events">这题</a>，解答来自印度老哥 StubbornAtom.</p>
-<p>他只给出了 $n=2$ 时的做法，我在这里给出完整证明。</p>
-<p>注意到</p>
-<script type="math/tex; mode=display">EI_{A_i} = P(A_i)</script><p>其中 $I_{A_i}$ 为 $A_i$ 的示性函数。</p>
+<p>他只给出了 $n&#x3D;2$ 时的做法，我在这里给出完整证明。</p>
+<p>注意到<br>$$ EI_{A_i} &#x3D; P(A_i) $$<br>其中 $I_{A_i}$ 为 $A_i$ 的示性函数。</p>
 <p>不难验证，(1) 式左侧</p>
-<script type="math/tex; mode=display">
-\begin{align}
-P(\cup_{i=1}^n A_i) &= EI_{\cup_{i=1}^n A_i} \\\\
-&= EI^2_{\cup_{i=1}^n A_i} \\\\
-\end{align}</script><p>(1) 式右侧分子</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\left( \sum P(A_i) \right)^2 &= \left( \sum EI_{A_i} \right)^2  \\\\
-&= \left( E\sum I_{A_i}  \right)^2  \\\\
-\end{aligned}</script><p>(1) 式右侧分母</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\sum\limits_{i=1}^n P(A_i) + 2\sum\limits_{i<j} P(A_i A_j) &= \sum EI_{A_i} + 2\sum_{i<j} EI_{A_i \cap A_j} \\\\
-&=\sum EI^2_{A_i} + 2\sum_{i<j} EI_{A_i} I_{A_j} \\\\
-&= E(\sum I_{A_i})^2
-\end{aligned}</script><p>由 Cauchy-Schwarz 不等式，</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-EI^2_{\cup_{i=1}^n A_i} E(\sum I_{A_i})^2 &\ge \left(E\sum I_{\cup_{j=1}^n A_j} I_{A_i} \right)^2 \\\\
-&= \left( E\sum I_{A_i} \right)^2 \\
-\end{aligned}</script><hr>
+<p>$$<br>\begin{align}<br>P(\cup_{i&#x3D;1}^n A_i) &amp;&#x3D; EI_{\cup_{i&#x3D;1}^n A_i} \\<br>&amp;&#x3D; EI^2_{\cup_{i&#x3D;1}^n A_i} \\<br>\end{align}<br>$$</p>
+<p>(1) 式右侧分子</p>
+<p>$$<br>\begin{aligned}<br>\left( \sum P(A_i) \right)^2 &amp;&#x3D; \left( \sum EI_{A_i} \right)^2  \\<br>&amp;&#x3D; \left( E\sum I_{A_i}  \right)^2  \\<br>\end{aligned}<br>$$</p>
+<p>(1) 式右侧分母</p>
+<p>$$<br>\begin{aligned}<br>\sum\limits_{i&#x3D;1}^n P(A_i) + 2\sum\limits_{i&lt;j} P(A_i A_j) &amp;&#x3D; \sum EI_{A_i} + 2\sum_{i&lt;j} EI_{A_i \cap A_j} \\<br>&amp;&#x3D;\sum EI^2_{A_i} + 2\sum_{i&lt;j} EI_{A_i} I_{A_j} \\<br>&amp;&#x3D; E(\sum I_{A_i})^2<br>\end{aligned}<br>$$</p>
+<p>由 Cauchy-Schwarz 不等式，</p>
+<p>$$<br>\begin{aligned}<br>EI^2_{\cup_{i&#x3D;1}^n A_i} E(\sum I_{A_i})^2 &amp;\ge \left(E\sum I_{\cup_{j&#x3D;1}^n A_j} I_{A_i} \right)^2 \\<br>&amp;&#x3D; \left( E\sum I_{A_i} \right)^2 \<br>\end{aligned}<br>$$</p>
+<hr>
 <blockquote>
-<p>$2.$ 设随机变量 $X,Y$ 独立同分布，期望为 $0$, 方差为 $1$, $X-Y,X+Y$ 相互独立，证明：</p>
-<script type="math/tex; mode=display">
-   \begin{align}
-   X,Y \sim N(0,1)
-   \end{align}</script></blockquote>
+<p>$2.$ 设随机变量 $X,Y$ 独立同分布，期望为 $0$, 方差为 $1$, $X-Y,X+Y$ 相互独立，证明：<br>   $$<br>   \begin{align}<br>   X,Y \sim N(0,1)<br>   \end{align}<br>   $$</p>
+</blockquote>
 <p>设 $X,Y$ 的特征函数为 $f(t)$,  则</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&f_{X+Y}(t) = f^2(t) \\\\
-&f_{X-Y}(t) = f(t)f(-t)
-\end{aligned}</script><p>而</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-f_{X+Y}(t) &= f(2t)\\\\
-f_{2X}(t) &= f(2t)
-\end{aligned}</script><p>再注意到</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-f_{2X}(t) &= f_{X-Y+X+Y} (t) \\\\
-&=f^3 (t) f(-t)
-\end{aligned}</script><p>从而 $f(2t) = f^3(t) f(-t)$, 并且 $f(-2t) = f^3(-t) f(t)$.</p>
+<p>$$<br>\begin{aligned}<br>&amp;f_{X+Y}(t) &#x3D; f^2(t) \\<br>&amp;f_{X-Y}(t) &#x3D; f(t)f(-t)<br>\end{aligned}<br>$$</p>
+<p>而</p>
+<p>$$<br>\begin{aligned}<br>f_{X+Y}(t) &amp;&#x3D; f(2t)\\<br>f_{2X}(t) &amp;&#x3D; f(2t)<br>\end{aligned}<br>$$</p>
+<p>再注意到</p>
+<p>$$<br>\begin{aligned}<br>f_{2X}(t) &amp;&#x3D; f_{X-Y+X+Y} (t) \\<br>&amp;&#x3D;f^3 (t) f(-t)<br>\end{aligned}<br>$$</p>
+<p>从而 $f(2t) &#x3D; f^3(t) f(-t)$, 并且 $f(-2t) &#x3D; f^3(-t) f(t)$.</p>
 <p>上面两式相除，得 </p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\frac{f(2t)}{f(-2t)} = \left( \frac{f(t)}{f(-t)} \right)^2 
-\end{aligned}</script><p>利用上式迭代，并注意到 $f(t) = 1 - \frac12 t^2 + o(t^2)$,</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\frac{f(t)}{f(-t)} &= \left( \frac{f(\frac12 t)}{f(-\frac12 t)} \right)^2 \\\\
-&=\left( \frac{f(\frac t{2^n} )}{f(-\frac{t}{2^n})} \right)^{2^n} \\\\
-&= \lim_{n\to\infty} \left( \frac{f(\frac tn)}{f(-\frac tn)} \right)^n \\\\
-&=\lim_{n\to\infty} \left( \frac{1+o(\frac1n)}{1-o(\frac1n)} \right)^n \\\\
-&= \lim_{n\to\infty} (1+o(\frac1n))^n\\\\
-&=1
-\end{aligned}</script><p>所以，$f(t) = f(-t)$, 从而 $f(2t) = f^4 (t)$.</p>
+<p>$$<br>\begin{aligned}<br>\frac{f(2t)}{f(-2t)} &#x3D; \left( \frac{f(t)}{f(-t)} \right)^2<br>\end{aligned}<br>$$</p>
+<p>利用上式迭代，并注意到 $f(t) &#x3D; 1 - \frac12 t^2 + o(t^2)$,</p>
+<p>$$<br>\begin{aligned}<br>\frac{f(t)}{f(-t)} &amp;&#x3D; \left( \frac{f(\frac12 t)}{f(-\frac12 t)} \right)^2 \\<br>&amp;&#x3D;\left( \frac{f(\frac t{2^n} )}{f(-\frac{t}{2^n})} \right)^{2^n} \\<br>&amp;&#x3D; \lim_{n\to\infty} \left( \frac{f(\frac tn)}{f(-\frac tn)} \right)^n \\<br>&amp;&#x3D;\lim_{n\to\infty} \left( \frac{1+o(\frac1n)}{1-o(\frac1n)} \right)^n \\<br>&amp;&#x3D; \lim_{n\to\infty} (1+o(\frac1n))^n\\<br>&amp;&#x3D;1<br>\end{aligned}<br>$$</p>
+<p>所以，$f(t) &#x3D; f(-t)$, 从而 $f(2t) &#x3D; f^4 (t)$.</p>
 <p>再次迭代，</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-f(t) &= f^4(\frac12 t) \\\\
-&= f^{4^n}(\frac t{2^n}) \\\\
-&=\lim_{n\to\infty} f^{4^n} (\frac t{2^n}) \\\\
-&=\lim_{n\to\infty} (1-\frac{t^2}{2^{2n+1}} + o(\frac{t^2}{4^n}))^{4^n} \\\\
-&={\rm e}^{-\frac12 t^2}
-\end{aligned}</script><p>由连续性定理，即证$X,Y\sim N(0,1)$.</p>
+<p>$$<br>\begin{aligned}<br>f(t) &amp;&#x3D; f^4(\frac12 t) \\<br>&amp;&#x3D; f^{4^n}(\frac t{2^n}) \\<br>&amp;&#x3D;\lim_{n\to\infty} f^{4^n} (\frac t{2^n}) \\<br>&amp;&#x3D;\lim_{n\to\infty} (1-\frac{t^2}{2^{2n+1}} + o(\frac{t^2}{4^n}))^{4^n} \\<br>&amp;&#x3D;{\rm e}^{-\frac12 t^2}<br>\end{aligned}<br>$$</p>
+<p>由连续性定理，即证$X,Y\sim N(0,1)$.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/09/2022-10-09-21Spring-final-exam/" data-id="cl99rukkb0000lwux683sboxb" data-title="概率论21年秋期末考试题" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/09/2022-10-09-21Spring-final-exam/" data-id="cl9beb2380000zcux4ux84zgi" data-title="概率论21年秋期末考试题" class="article-share-link">Share</a>
       
       
       
@@ -216,7 +175,7 @@ f(t) &= f^4(\frac12 t) \\\\
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/nonparametric-statistics/" rel="tag">nonparametric-statistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stochastic-process/" rel="tag">stochastic-process</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/complex-analysis/" rel="tag">complex-analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nonparametric-statistics/" rel="tag">nonparametric-statistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stochastic-process/" rel="tag">stochastic-process</a></li></ul>
     </div>
   </div>
 
@@ -226,7 +185,7 @@ f(t) &= f^4(\frac12 t) \\\\
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/nonparametric-statistics/" style="font-size: 10px;">nonparametric-statistics</a> <a href="/tags/stochastic-process/" style="font-size: 10px;">stochastic-process</a>
+      <a href="/tags/complex-analysis/" style="font-size: 10px;">complex-analysis</a> <a href="/tags/nonparametric-statistics/" style="font-size: 10px;">nonparametric-statistics</a> <a href="/tags/stochastic-process/" style="font-size: 10px;">stochastic-process</a>
     </div>
   </div>
 
@@ -248,6 +207,10 @@ f(t) &= f^4(\frac12 t) \\\\
       <ul>
         
           <li>
+            <a href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/">每日一题 day01/10</a>
+          </li>
+        
+          <li>
             <a href="/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/">符号检验</a>
           </li>
         
@@ -261,10 +224,6 @@ f(t) &= f^4(\frac12 t) \\\\
         
           <li>
             <a href="/2022/10/09/2022-10-09-blog-writting-md/">blog writting</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/09/2022-10-09-21Spring-final-exam/">概率论21年秋期末考试题</a>
           </li>
         
       </ul>
