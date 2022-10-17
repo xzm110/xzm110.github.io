@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>每日一题 十天计划 | Hexo</title>
+  <title>每日一题 day02/10 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="准备每天写一个题，放在这里，希望坚持十天。">
+  <meta name="description" content="设 $a_k &#x3D; \mathop{arg min}\limits_{a} f(x + ad)$,并且 $||\nabla^2 f(x+ad)|| \le M, \forall a &gt; 0$.证明：$f(x) - f(x + a_k d) \ge \frac1{2M} || \nabla f(x) ||^2 cos^2&lt;d, \nabla f(x)&gt;$    Proof">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每日一题 十天计划">
-<meta property="og:url" content="http://example.com/2022/10/15/2022-10-15-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%8D%81%E5%A4%A9%E8%AE%A1%E5%88%92/index.html">
+<meta property="og:title" content="每日一题 day02&#x2F;10">
+<meta property="og:url" content="http://example.com/2022/10/17/2022-10-17-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day02-10/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="准备每天写一个题，放在这里，希望坚持十天。">
+<meta property="og:description" content="设 $a_k &#x3D; \mathop{arg min}\limits_{a} f(x + ad)$,并且 $||\nabla^2 f(x+ad)|| \le M, \forall a &gt; 0$.证明：$f(x) - f(x + a_k d) \ge \frac1{2M} || \nabla f(x) ||^2 cos^2&lt;d, \nabla f(x)&gt;$    Proof">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-10-15T03:37:30.000Z">
-<meta property="article:modified_time" content="2022-10-15T03:55:19.810Z">
+<meta property="article:published_time" content="2022-10-17T13:01:08.000Z">
+<meta property="article:modified_time" content="2022-10-17T13:47:26.931Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="optimization-method">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -73,10 +74,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-2022-10-15-每日一题-十天计划" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-2022-10-17-每日一题-day02-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/10/15/2022-10-15-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%8D%81%E5%A4%A9%E8%AE%A1%E5%88%92/" class="article-date">
-  <time class="dt-published" datetime="2022-10-15T03:37:30.000Z" itemprop="datePublished">2022-10-15</time>
+    <a href="/2022/10/17/2022-10-17-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day02-10/" class="article-date">
+  <time class="dt-published" datetime="2022-10-17T13:01:08.000Z" itemprop="datePublished">2022-10-17</time>
 </a>
     
   </div>
@@ -87,7 +88,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      每日一题 十天计划
+      每日一题 day02/10
     </h1>
   
 
@@ -95,34 +96,32 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>准备每天写一个题，放在这里，希望坚持十天。</p>
+        <blockquote>
+<p>设 $a_k &#x3D; \mathop{arg min}\limits_{a} f(x + ad)$,<br>并且 $||\nabla^2 f(x+ad)|| \le M, \forall a &gt; 0$.<br>证明：$f(x) - f(x + a_k d) \ge \frac1{2M} || \nabla f(x) ||^2 cos^2&lt;d, \nabla f(x)&gt;$  </p>
+</blockquote>
+<p>Proof:<br>$$<br>\begin{align}<br>f(x) - f(x + a_k d) &amp;\ge f(x) - f(x+ad) \\<br>        &amp;&#x3D; -\left( ad^T \nabla f(x) + \frac12 a^2 d^T\nabla^2f(x+\theta ad) d  \right), 0&lt;\theta &lt;1, \\<br>        &amp;\ge -(a d^T \nabla f(x) + \frac12 a^2 Md^Td) \\<br>        &amp;\ge -(a d^T \nabla f(x) + \frac12 a^2 Md^Td)\big|_{a &#x3D; -\frac{d^T \nabla f}{Md^Td}} \\<br>        &amp;&#x3D; \frac1{2M} \frac{(d^T \nabla f(x))^2}{d^Td} \\<br>        &amp;&#x3D; \frac1{2M} || \nabla f(x) ||^2 cos^2&lt;d, \nabla f(x)&gt; \\<br>\end{align}<br>$$<br>第一个不等号由 $a_k$ 的定义，第一个等号由 Taylor residual theorem, 第二个不等号由 Cauchy 不等式，第三个不等号由二次函数取最值。</p>
+<p>Remark:</p>
+<p>$||\nabla^2 f(x+ad)|| \le M, \forall a &gt; 0$ 似乎可以得到很多信息，例如 $ \nabla^2 f \le MI$, 以及 $\nabla f$ 的 Lipschitz 连续，$ ||\nabla f(x) - \nabla f(y)|| \le M||x - y||$ </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/15/2022-10-15-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%8D%81%E5%A4%A9%E8%AE%A1%E5%88%92/" data-id="cl9beb23i0004zcuxhbw4bivj" data-title="每日一题 十天计划" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/17/2022-10-17-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day02-10/" data-id="cl9csm48d0000i4ux5wyr8mgx" data-title="每日一题 day02/10" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/optimization-method/" rel="tag">optimization-method</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          符号检验
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/10/15/2022-10-15-Laplace-transfrom-of-renewal-equation/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Laplace transfrom of renewal equation</div>
+      <div class="article-nav-title">每日一题 day01/10</div>
     </a>
   
 </nav>

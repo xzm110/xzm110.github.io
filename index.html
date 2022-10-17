@@ -71,6 +71,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2022-10-17-每日一题-day02-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/10/17/2022-10-17-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day02-10/" class="article-date">
+  <time class="dt-published" datetime="2022-10-17T13:01:08.000Z" itemprop="datePublished">2022-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/10/17/2022-10-17-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day02-10/">每日一题 day02/10</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>设 $a_k &#x3D; \mathop{arg min}\limits_{a} f(x + ad)$,<br>并且 $||\nabla^2 f(x+ad)|| \le M, \forall a &gt; 0$.<br>证明：$f(x) - f(x + a_k d) \ge \frac1{2M} || \nabla f(x) ||^2 cos^2&lt;d, \nabla f(x)&gt;$  </p>
+</blockquote>
+<p>Proof:<br>$$<br>\begin{align}<br>f(x) - f(x + a_k d) &amp;\ge f(x) - f(x+ad) \\<br>        &amp;&#x3D; -\left( ad^T \nabla f(x) + \frac12 a^2 d^T\nabla^2f(x+\theta ad) d  \right), 0&lt;\theta &lt;1, \\<br>        &amp;\ge -(a d^T \nabla f(x) + \frac12 a^2 Md^Td) \\<br>        &amp;\ge -(a d^T \nabla f(x) + \frac12 a^2 Md^Td)\big|_{a &#x3D; -\frac{d^T \nabla f}{Md^Td}} \\<br>        &amp;&#x3D; \frac1{2M} \frac{(d^T \nabla f(x))^2}{d^Td} \\<br>        &amp;&#x3D; \frac1{2M} || \nabla f(x) ||^2 cos^2&lt;d, \nabla f(x)&gt; \\<br>\end{align}<br>$$<br>第一个不等号由 $a_k$ 的定义，第一个等号由 Taylor residual theorem, 第二个不等号由 Cauchy 不等式，第三个不等号由二次函数取最值。</p>
+<p>Remark:</p>
+<p>$||\nabla^2 f(x+ad)|| \le M, \forall a &gt; 0$ 似乎可以得到很多信息，例如 $ \nabla^2 f \le MI$, 以及 $\nabla f$ 的 Lipschitz 连续，$ ||\nabla f(x) - \nabla f(y)|| \le M||x - y||$ </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/10/17/2022-10-17-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day02-10/" data-id="cl9csm48d0000i4ux5wyr8mgx" data-title="每日一题 day02/10" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/optimization-method/" rel="tag">optimization-method</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2022-10-16-每日一题-day01-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/" class="article-date">
@@ -93,9 +139,15 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Proof $\int_0^\infty \sin(x^2) dx &#x3D; \int_0^\infty \cos(x^2) &#x3D; \frac{\sqrt{2\pi}}4$.</p>
-<p>Let $e^{-z^2}$ integrate on the contour $\gamma &#x3D; \gamma_1 + \gamma_2 - \gamma_3$,<br>$\gamma_1: z &#x3D; t, 0 \le 0 \le R$,<br>$\gamma_2: z &#x3D; Re^{it}, 0\le t \le \frac{\pi}4$,<br>$\gamma_3: z &#x3D; te^{i\frac\pi4}, 0 &lt; t &lt; R$</p>
-<p>Then by Cauchy theorem, $\int_\gamma e^{-z^2} &#x3D; 0$.<br>That is<br>$$<br>\int_0^R e^{-t^2} dt + \int_{\gamma_2} e^{-z^2}dz  &#x3D; \int_{\gamma_3} e^{-z^2} dz<br>$$<br>Let $R \to \infty$, $\int_{\gamma_2} e^{-z^2}dz \le \frac{R}{e^{R^2}} \to 0$<br>Hence,<br>$$<br>\int_0^\infty e^{-t^2} dt &#x3D; \int_{0}^\infty e^{-it^2}e^{i\frac\pi4}dt<br>$$<br>By Euler’s formula,<br>$$<br>    \frac{\sqrt{\pi}}2 &#x3D; (\frac{\sqrt2}2 + i \frac{\sqrt2} 2)(\int \cos(x^2) - i \int \sin(x^2))<br>$$<br>as desired.</p>
+        <p>Proof $\int_0^\infty \sin(x^2) dx = \int_0^\infty \cos(x^2) = \frac{\sqrt{2\pi}}4$.</p>
+<p>Let $e^{-z^2}$ integrate on the contour $\gamma = \gamma_1 + \gamma_2 - \gamma_3$,<br>$\gamma_1: z = t, 0 \le 0 \le R$,<br>$\gamma_2: z = Re^{it}, 0\le t \le \frac{\pi}4$,<br>$\gamma_3: z = te^{i\frac\pi4}, 0 &lt; t &lt; R$</p>
+<p>Then by Cauchy theorem, $\int_\gamma e^{-z^2} = 0$.<br>That is</p>
+<script type="math/tex; mode=display">
+\int_0^R e^{-t^2} dt + \int_{\gamma_2} e^{-z^2}dz  = \int_{\gamma_3} e^{-z^2} dz</script><p>Let $R \to \infty$, $\int_{\gamma_2} e^{-z^2}dz \le \frac{CR}{e^{R^2}} \to 0$, $C$ is a constant resulted from Lagarange theorem.<br>Hence, </p>
+<script type="math/tex; mode=display">
+\int_0^\infty e^{-t^2} dt = \int_{0}^\infty e^{-it^2}e^{i\frac\pi4}dt</script><p>By Euler’s formula,</p>
+<script type="math/tex; mode=display">
+    \frac{\sqrt{\pi}}2 = (\frac{\sqrt2}2 + i \frac{\sqrt2} 2)(\int \cos(x^2) - i \int \sin(x^2))</script><p>as desired.</p>
 
       
     </div>
@@ -428,7 +480,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/complex-analysis/" rel="tag">complex-analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nonparametric-statistics/" rel="tag">nonparametric-statistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stochastic-process/" rel="tag">stochastic-process</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/complex-analysis/" rel="tag">complex-analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nonparametric-statistics/" rel="tag">nonparametric-statistics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/optimization-method/" rel="tag">optimization-method</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stochastic-process/" rel="tag">stochastic-process</a></li></ul>
     </div>
   </div>
 
@@ -438,7 +490,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/complex-analysis/" style="font-size: 10px;">complex-analysis</a> <a href="/tags/nonparametric-statistics/" style="font-size: 10px;">nonparametric-statistics</a> <a href="/tags/stochastic-process/" style="font-size: 10px;">stochastic-process</a>
+      <a href="/tags/complex-analysis/" style="font-size: 10px;">complex-analysis</a> <a href="/tags/nonparametric-statistics/" style="font-size: 10px;">nonparametric-statistics</a> <a href="/tags/optimization-method/" style="font-size: 10px;">optimization-method</a> <a href="/tags/stochastic-process/" style="font-size: 10px;">stochastic-process</a>
     </div>
   </div>
 
@@ -460,6 +512,10 @@
       <ul>
         
           <li>
+            <a href="/2022/10/17/2022-10-17-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day02-10/">每日一题 day02/10</a>
+          </li>
+        
+          <li>
             <a href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/">每日一题 day01/10</a>
           </li>
         
@@ -473,10 +529,6 @@
         
           <li>
             <a href="/2022/10/15/2022-10-15-Laplace-transfrom-of-renewal-equation/">Laplace transfrom of renewal equation</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/09/2022-10-09-blog-writting-md/">blog writting</a>
           </li>
         
       </ul>
