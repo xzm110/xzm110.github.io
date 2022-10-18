@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Tag: complex-analysis | Hexo</title>
+  <title>每日一题 day03/10 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/complex-analysis/index.html">
+  <meta name="description" content="对于更新过程，证明 $P\left(T_{N(t)} \le s\right) &#x3D; \bar{F}(t) + \int_0^s \bar{F}(t-y) dM(y) 0 &lt; s &lt; t $.  符号解释：$N(t)$ 表示 $[0, t]$ 时间段内发生的更新次数，$T_{N(t)}$ 表示第 $N(t)$ 次更新发生时间，$F(t)$ 表示更新间隔的分布函数，$\bar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日一题 day03&#x2F;10">
+<meta property="og:url" content="http://example.com/2022/10/18/2022-10-18-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day03-10/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="对于更新过程，证明 $P\left(T_{N(t)} \le s\right) &#x3D; \bar{F}(t) + \int_0^s \bar{F}(t-y) dM(y) 0 &lt; s &lt; t $.  符号解释：$N(t)$ 表示 $[0, t]$ 时间段内发生的更新次数，$T_{N(t)}$ 表示第 $N(t)$ 次更新发生时间，$F(t)$ 表示更新间隔的分布函数，$\bar">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-10-18T13:11:28.000Z">
+<meta property="article:modified_time" content="2022-10-18T14:19:06.284Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="stochastic-process">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -69,39 +74,59 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-10-16T13:07:22.000Z" itemprop="datePublished">Oct 16</time>
+        <section id="main"><article id="post-2022-10-18-每日一题-day03-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/10/18/2022-10-18-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day03-10/" class="article-date">
+  <time class="dt-published" datetime="2022-10-18T13:11:28.000Z" itemprop="datePublished">2022-10-18</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/">每日一题 day01/10</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      每日一题 day03/10
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>对于更新过程，证明 $P\left(T_{N(t)} \le s\right) &#x3D; \bar{F}(t) + \int_0^s \bar{F}(t-y) dM(y) 0 &lt; s &lt; t $.</p>
+</blockquote>
+<p>符号解释：$N(t)$ 表示 $[0, t]$ 时间段内发生的更新次数，$T_{N(t)}$ 表示第 $N(t)$ 次更新发生时间，<br>$F(t)$ 表示更新间隔的分布函数，<br>$\bar F(t) &#x3D; 1- F(t)$ 表示 $F$ 的生存函数, $M(y)$ 表示更新函数。<br>想法是利用寿命的分布以及寿命和年龄的关系来证明，<br>定义 $t$ 时刻的年龄(Age) $A(t) &#x3D; t - T_{N(t)}$, 定义寿命(Remaining time) $R(t) &#x3D; T_{N(t) + 1} - t$.<br>那么，<br>$$<br>\begin{align}<br>P\left( T_{N(t)} \le s\right) &amp;&#x3D; P\left( t - T_{N(t)} \ge t-s \right) \\<br>&amp;&#x3D; P\left(A(t) \ge t-s\right) \\<br>&amp;&#x3D; P\left( R(s) \ge t-s \right)<br>\end{align}<br>$$<br>于是只要求出 $R(s)$ 的分布即可。<br>利用得到更新方程的想法推出 $R(s)$ 的分布，记 $X_1$ 表示第一次发生更新的时刻，对 $X_1$ 取重期望，<br>$$<br>P\left( R(s) &gt; x | X_1 \right) &#x3D;<br>\begin{cases}<br>P\left(R(s-X_1) &gt; s\right), &amp; 0 \le X_1 \le s, \\<br>0, &amp; s &lt; X_1 \le x, \\<br>1, &amp; X_1 &gt; s+x \\<br>\end{cases}<br>$$<br>对 $X_1$ 取期望，有<br>$$<br>P\left( R(s) &gt; x\right) &#x3D; \bar F(x+s) + \int_0^s P\left( R(s-y) &gt; x  \right) dF(y)<br>$$<br>把上面的方程左右视为 $s$ 的函数，恰好是更新方程的形式，于是，应用更新方程的解的定理，得到<br>$$<br>P\left( R(s) &gt; x\right) &#x3D; \bar F(x+s) + \int_0^s \bar F(s+x-y) dM(y)<br>$$<br>由此便得到了 $R(s)$ 的分布形式，取 $x &#x3D; t-s$ 就证明了上面的等式。</p>
+<p>Remark:<br>不能直接对 $A(x)$ 进行类似 $R(t)$ 的讨论，因为 $A(t)|X_1$ 似乎没什么很大意义。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/10/18/2022-10-18-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day03-10/" data-id="cl9e894o00001x0ux32ug4ewu" data-title="每日一题 day03/10" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stochastic-process/" rel="tag">stochastic-process</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/10/18/2022-10-18-sampling-theory/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2022 10 18 sampling theory</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
