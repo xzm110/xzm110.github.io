@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Tag: complex-analysis | Hexo</title>
+  <title>每日一题 day06/10 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/complex-analysis/index.html">
+  <meta name="description" content="今天先证明一个定理，再用来做一个小题目。或许我应该复习一点概率理论了，我常常因为自己菜而感到难过，也因为自己理论基础不扎实而难过。 假设有一列独立同分布的随机变量 $X_1, X_2, X_3…$, 同时 $N(t)$ 是一个强度为 $\lambda$ 的与 $X_i$独立的 Poisson process, 定义 $X(t) &#x3D; \sum_{i&#x3D;1}^{N(t)} X_i$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日一题 day06&#x2F;10">
+<meta property="og:url" content="http://example.com/2022/10/21/2022-10-21-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day06-10/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="今天先证明一个定理，再用来做一个小题目。或许我应该复习一点概率理论了，我常常因为自己菜而感到难过，也因为自己理论基础不扎实而难过。 假设有一列独立同分布的随机变量 $X_1, X_2, X_3…$, 同时 $N(t)$ 是一个强度为 $\lambda$ 的与 $X_i$独立的 Poisson process, 定义 $X(t) &#x3D; \sum_{i&#x3D;1}^{N(t)} X_i$">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-10-21T14:17:43.000Z">
+<meta property="article:modified_time" content="2022-10-21T14:58:11.031Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="stochastic-process">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -69,39 +74,69 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-10-16T13:07:22.000Z" itemprop="datePublished">Oct 16</time>
+        <section id="main"><article id="post-2022-10-21-每日一题-day06-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/10/21/2022-10-21-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day06-10/" class="article-date">
+  <time class="dt-published" datetime="2022-10-21T14:17:43.000Z" itemprop="datePublished">2022-10-21</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/10/16/2022-10-16-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day01-10/">每日一题 day01/10</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      每日一题 day06/10
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>今天先证明一个定理，再用来做一个小题目。<br>或许我应该复习一点概率理论了，我常常因为自己菜而感到难过，也因为自己理论基础不扎实而难过。</p>
+<p>假设有一列独立同分布的随机变量 $X_1, X_2, X_3…$, 同时 $N(t)$ 是一个强度为 $\lambda$ 的与 $X_i$独立的 Poisson process, 定义 $X(t) &#x3D; \sum_{i&#x3D;1}^{N(t)} X_i$ 是一个 compound Poisson process.</p>
+<p>Assume $EX_i^2 &lt; \infty$, proof $EX(t) &#x3D; \lambda t EX_1, VarX(t) &#x3D; \lambda t EX_1^2$.</p>
+<p>Proof it by take condition on $N(t)$,<br>$$<br>\begin{align}<br>EX(t) &amp;&#x3D; E\left[ EX(t) | N(t) \right] \\<br>        &amp;&#x3D; E\left[ N(t) EX_1  \right] \\<br>        &amp;&#x3D; \lambda t EX_1 \\<br>\end{align}<br>$$<br>To calculate $VarX(t)$, we use the decomposition of $VarX(t)$ by taking condition on $N(t)$.<br>$$<br>\begin{align}<br>VarX(t) &amp;&#x3D; Var\left[ E\left[ X(t) | N(t) \right] \right] + E Var\left[ X(t)| N(t) \right] \\<br>           &amp;&#x3D; \lambda t (EX_1)^2 + E N(t) VarX_1 \\<br>           &amp;&#x3D; \lambda t EX_1^2<br>\end{align}<br>$$<br>as desired.</p>
+<p>Another proof is using the moment generating function.<br>$$<br>\begin{align}<br>Ee^{sX(t)} &amp;&#x3D; E\left[Ee^{s\sum_{i&#x3D;1}^{N(t)} X_i} | N(t)\right] \\<br>        &amp;&#x3D; E\left[ \left(Ee^{sX_1}\right)^{N(t)} \right] \\<br>        &amp;&#x3D; e^{ \lambda t\left(Ee^{sX_1}-1\right)} \\<br>\end{align}<br>$$<br>Take derivates of the moment generating function $Ee^{sX(t)}$ with respect to $s$ and set $s&#x3D;0$, then the result is derived.</p>
+<p>A small example:<br>Assume $X_i$ is multinomial distributed with probability $P(X_i&#x3D;1) &#x3D; \frac18, P(X_i &#x3D; 2) &#x3D; \frac18, P(X_i&#x3D;3) &#x3D; \frac12, P(X_i&#x3D;4) &#x3D; \frac14$, and rate $\lambda &#x3D; 3$<br>Calculate $EX(10)$<br>Pretty easy $EX_1 &#x3D; \frac{23}8$. Hence, $EX(10) &#x3D; 10 \times 3 \times \frac{23}8 &#x3D; \frac{345}4$.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/10/21/2022-10-21-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day06-10/" data-id="cl9k0px56000myouxbmsx2hvv" data-title="每日一题 day06/10" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stochastic-process/" rel="tag">stochastic-process</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/10/22/2022-10-22-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day07-10/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          每日一题 day07/10
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/10/20/2022-10-20-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day05-10/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">每日一题 day05/10</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
