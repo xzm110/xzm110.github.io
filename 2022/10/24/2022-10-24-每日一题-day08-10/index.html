@@ -14,7 +14,7 @@
 <meta property="og:description" content="what a fuck, a day a problem is distrupted by myself.Continue…又拿作业题来水了，不愧是我，下次绝对不这样了。  For Markov chain, assume $f_{ii} &lt; 1, f_{jj} &lt; 1$,proof $\sum_{n&#x3D;1}^\infty P_{ij}^n &lt; \infty$and $f">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-24T14:20:57.000Z">
-<meta property="article:modified_time" content="2022-10-24T15:03:12.316Z">
+<meta property="article:modified_time" content="2022-10-24T15:06:26.591Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="stochastic-process">
 <meta name="twitter:card" content="summary">
@@ -100,7 +100,7 @@
 <blockquote>
 <p>For Markov chain, assume $f_{ii} &lt; 1, f_{jj} &lt; 1$,<br>proof $\sum_{n&#x3D;1}^\infty P_{ij}^n &lt; \infty$<br>and $f_{ij} &#x3D;\frac{\sum_{n&#x3D;1}^\infty P_{ij}^n}{1 + \sum_{n&#x3D;1}^\infty P_{jj}^n}$</p>
 </blockquote>
-<p>Note that<br>$$<br>\begin{align}<br>\sum_{n&#x3D;1}^\infty {P_{ij}^n} &amp;&#x3D; \sum_{n&#x3D;1}^\infty {\sum_{l&#x3D;1}^n{f_{ij}^l {P_{jj}^{n-l}}}} \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty { \sum_{n&#x3D;l}^\infty {f_{ij}^l P_{jj}^{n-l} } }  \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty {\sum_{n&#x3D;0}^\infty {f_{ij}^l {P_{jj}^{n}} } } \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty {f_{ij}^l \sum_{n&#x3D;0}^\infty { P_{jj}^{n}}  } \\<br>&amp;&#x3D; f_{ij} \left( 1 + \sum_{n&#x3D;1}^\infty P_{jj}^n \right) \\<br>&amp;&#x3D; f_{ij} \left( 1 + \frac1{1 - f_{jj}} \right) \\<br>&amp;\le  1 + \frac1{1 - f_{jj} } \\<br>&amp;&lt; \infty \\<br>\end{align}<br>$$</p>
+<p>Note that<br>$$<br>\begin{align}<br>\sum_{n&#x3D;1}^\infty {P_{ij}^n} &amp;&#x3D; \sum_{n&#x3D;1}^\infty {\sum_{l&#x3D;1}^n{f_{ij}^l {P_{jj}^{n-l}}}} \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty { \sum_{n&#x3D;l}^\infty {f_{ij}^l P_{jj}^{n-l} } }  \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty {\sum_{n&#x3D;0}^\infty {f_{ij}^l {P_{jj}^{n}} } } \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty {f_{ij}^l \sum_{n&#x3D;0}^\infty { P_{jj}^{n}}  } \\<br>&amp;&#x3D; f_{ij} \left( \sum_{n&#x3D;0}^\infty P_{jj}^n \right) \\<br>&amp;&#x3D; f_{ij} \left( \frac1{1 - f_{jj}} \right) \\<br>&amp;\le \frac1{1 - f_{jj} } \\<br>&amp;&lt; \infty \\<br>\end{align}<br>$$</p>
 <p>By the proof above, specifically the last equation<br>$f_{ij} &#x3D; \frac{\sum_{n&#x3D;1}^\infty P_{ij}^n}{1 + \sum_{n&#x3D;1}^\infty P_{jj}^n}$</p>
 
       

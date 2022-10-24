@@ -97,7 +97,7 @@
 <blockquote>
 <p>For Markov chain, assume $f_{ii} &lt; 1, f_{jj} &lt; 1$,<br>proof $\sum_{n&#x3D;1}^\infty P_{ij}^n &lt; \infty$<br>and $f_{ij} &#x3D;\frac{\sum_{n&#x3D;1}^\infty P_{ij}^n}{1 + \sum_{n&#x3D;1}^\infty P_{jj}^n}$</p>
 </blockquote>
-<p>Note that<br>$$<br>\begin{align}<br>\sum_{n&#x3D;1}^\infty {P_{ij}^n} &amp;&#x3D; \sum_{n&#x3D;1}^\infty {\sum_{l&#x3D;1}^n{f_{ij}^l {P_{jj}^{n-l}}}} \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty { \sum_{n&#x3D;l}^\infty {f_{ij}^l P_{jj}^{n-l} } }  \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty {\sum_{n&#x3D;0}^\infty {f_{ij}^l {P_{jj}^{n}} } } \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty {f_{ij}^l \sum_{n&#x3D;0}^\infty { P_{jj}^{n}}  } \\<br>&amp;&#x3D; f_{ij} \left( 1 + \sum_{n&#x3D;1}^\infty P_{jj}^n \right) \\<br>&amp;&#x3D; f_{ij} \left( 1 + \frac1{1 - f_{jj}} \right) \\<br>&amp;\le  1 + \frac1{1 - f_{jj} } \\<br>&amp;&lt; \infty \\<br>\end{align}<br>$$</p>
+<p>Note that<br>$$<br>\begin{align}<br>\sum_{n&#x3D;1}^\infty {P_{ij}^n} &amp;&#x3D; \sum_{n&#x3D;1}^\infty {\sum_{l&#x3D;1}^n{f_{ij}^l {P_{jj}^{n-l}}}} \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty { \sum_{n&#x3D;l}^\infty {f_{ij}^l P_{jj}^{n-l} } }  \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty {\sum_{n&#x3D;0}^\infty {f_{ij}^l {P_{jj}^{n}} } } \\<br>&amp;&#x3D; \sum_{l&#x3D;1}^\infty {f_{ij}^l \sum_{n&#x3D;0}^\infty { P_{jj}^{n}}  } \\<br>&amp;&#x3D; f_{ij} \left( \sum_{n&#x3D;0}^\infty P_{jj}^n \right) \\<br>&amp;&#x3D; f_{ij} \left( \frac1{1 - f_{jj}} \right) \\<br>&amp;\le \frac1{1 - f_{jj} } \\<br>&amp;&lt; \infty \\<br>\end{align}<br>$$</p>
 <p>By the proof above, specifically the last equation<br>$f_{ij} &#x3D; \frac{\sum_{n&#x3D;1}^\infty P_{ij}^n}{1 + \sum_{n&#x3D;1}^\infty P_{jj}^n}$</p>
 
       
