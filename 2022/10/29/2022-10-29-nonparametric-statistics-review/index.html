@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Identity theorem | Hexo</title>
+  <title>非参数统计复习 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="It is a little hard to finish the exercises behind chapter2 on complex analysis stein for me. Here identity theorem is helpful.">
+  <meta name="description" content="从符号检验引申出分位数检验，再到 Cox-Stuart 趋势检验，而后学习了随机游程检验（Wald-Wolfowitz 游程检验）。 符号检验不关心数据的分布的形式，Wilcoxon 符号秩和检验可以认为是更精细的符号检验。 关于估计量的稳健性，介绍了三种方法来评价估计量的稳健性：敏感曲线、影响函数和失效点。 估计置信区间的方法：利用顺序统计量（构造分位数置信区间；对称分布中使用 Walsh 平均">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Identity theorem">
-<meta property="og:url" content="http://example.com/2022/10/26/2022-10-26-Identity-theorem/index.html">
+<meta property="og:title" content="非参数统计复习">
+<meta property="og:url" content="http://example.com/2022/10/29/2022-10-29-nonparametric-statistics-review/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="It is a little hard to finish the exercises behind chapter2 on complex analysis stein for me. Here identity theorem is helpful.">
+<meta property="og:description" content="从符号检验引申出分位数检验，再到 Cox-Stuart 趋势检验，而后学习了随机游程检验（Wald-Wolfowitz 游程检验）。 符号检验不关心数据的分布的形式，Wilcoxon 符号秩和检验可以认为是更精细的符号检验。 关于估计量的稳健性，介绍了三种方法来评价估计量的稳健性：敏感曲线、影响函数和失效点。 估计置信区间的方法：利用顺序统计量（构造分位数置信区间；对称分布中使用 Walsh 平均">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-10-26T02:15:04.000Z">
-<meta property="article:modified_time" content="2022-10-26T02:19:26.929Z">
+<meta property="article:published_time" content="2022-10-29T03:03:19.000Z">
+<meta property="article:modified_time" content="2022-10-29T03:56:17.712Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="complex-analysis">
+<meta property="article:tag" content="nonparametric-statistics">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
 
 <body>
   <div id="container">
@@ -74,10 +74,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-2022-10-26-Identity-theorem" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-2022-10-29-nonparametric-statistics-review" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/10/26/2022-10-26-Identity-theorem/" class="article-date">
-  <time class="dt-published" datetime="2022-10-26T02:15:04.000Z" itemprop="datePublished">2022-10-26</time>
+    <a href="/2022/10/29/2022-10-29-nonparametric-statistics-review/" class="article-date">
+  <time class="dt-published" datetime="2022-10-29T03:03:19.000Z" itemprop="datePublished">2022-10-29</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Identity theorem
+      非参数统计复习
     </h1>
   
 
@@ -96,17 +96,20 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>It is a little hard to finish the exercises behind chapter2 on complex analysis stein for me.</p>
-<p>Here <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Identity_theorem">identity theorem</a> is helpful.</p>
+        <p>从<a target="_blank" rel="noopener" href="https://xzm110.github.io/2022/10/15/2022-10-15-%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C/">符号检验</a>引申出分位数检验，再到 Cox-Stuart 趋势检验，而后学习了随机游程检验（<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wald%E2%80%93Wolfowitz_runs_test">Wald-Wolfowitz 游程检验</a>）。</p>
+<p>符号检验不关心数据的分布的形式，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wilcoxon_signed-rank_test#:~:text=The%20Wilcoxon%20signed%2Drank%20test,%2Dsample%20Student's%20t%2Dtest.">Wilcoxon 符号秩和检验</a>可以认为是更精细的符号检验。</p>
+<p>关于估计量的稳健性，介绍了三种方法来评价估计量的稳健性：敏感曲线、<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Influence_function">影响函数</a>和失效点。</p>
+<p>估计置信区间的方法：利用顺序统计量（构造分位数置信区间；对称分布中使用 Walsh 平均估计），bootstrap, 枢轴量。</p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Van_der_Waerden_test">正态记分检验</a> 我的建议是看 wikipedia 比看书清楚多了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/26/2022-10-26-Identity-theorem/" data-id="cl9r33i48000wf4uxfmcf44b9" data-title="Identity theorem" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/29/2022-10-29-nonparametric-statistics-review/" data-id="cl9tl123l001770ux38xpflzz" data-title="非参数统计复习" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/complex-analysis/" rel="tag">complex-analysis</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nonparametric-statistics/" rel="tag">nonparametric-statistics</a></li></ul>
 
     </footer>
   </div>
@@ -114,19 +117,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/10/26/2022-10-26-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day09-10/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          每日一题 day09/10
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/10/25/2022-10-25-application-of-sign-test/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/10/28/2022-10-28-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day10-10/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">application of sign test</div>
+      <div class="article-nav-title">每日一题 day10/10</div>
     </a>
   
 </nav>
@@ -156,7 +150,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/complex-analysis/" style="font-size: 13.33px;">complex-analysis</a> <a href="/tags/nonparametric-statistics/" style="font-size: 13.33px;">nonparametric-statistics</a> <a href="/tags/optimization-method/" style="font-size: 16.67px;">optimization-method</a> <a href="/tags/probability-theory/" style="font-size: 10px;">probability-theory</a> <a href="/tags/regression-analysis/" style="font-size: 10px;">regression-analysis</a> <a href="/tags/stochastic-process/" style="font-size: 20px;">stochastic-process</a>
+      <a href="/tags/complex-analysis/" style="font-size: 13.33px;">complex-analysis</a> <a href="/tags/nonparametric-statistics/" style="font-size: 16.67px;">nonparametric-statistics</a> <a href="/tags/optimization-method/" style="font-size: 16.67px;">optimization-method</a> <a href="/tags/probability-theory/" style="font-size: 10px;">probability-theory</a> <a href="/tags/regression-analysis/" style="font-size: 10px;">regression-analysis</a> <a href="/tags/stochastic-process/" style="font-size: 20px;">stochastic-process</a>
     </div>
   </div>
 
@@ -178,23 +172,23 @@
       <ul>
         
           <li>
+            <a href="/2022/10/29/2022-10-29-nonparametric-statistics-review/">非参数统计复习</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/28/2022-10-28-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day10-10/">每日一题 day10/10</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/28/2022-10-28-complex-analysis-review/">complex analysis review</a>
+          </li>
+        
+          <li>
             <a href="/2022/10/27/2022-10-27-%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%E4%B9%A0%E9%A2%98/">回归分析习题</a>
           </li>
         
           <li>
             <a href="/2022/10/26/2022-10-26-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day09-10/">每日一题 day09/10</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/26/2022-10-26-Identity-theorem/">Identity theorem</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/25/2022-10-25-application-of-sign-test/">application of sign test</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/24/2022-10-24-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-day08-10/">每日一题 day08/10</a>
           </li>
         
       </ul>
