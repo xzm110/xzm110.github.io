@@ -6,13 +6,15 @@
   
   <title>sampling theory review | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="article">
+  <meta name="description" content="[toc] SRS population NNN sample size nnn estimate Yˉ\bar YYˉ estimated variance 1−fnS2\frac{1-f}{n}S^2n1−f​S2. stratum sampling cluster sampling">
+<meta property="og:type" content="article">
 <meta property="og:title" content="sampling theory review">
 <meta property="og:url" content="http://example.com/2022/10/29/2022-10-29-sampling-theory-review/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[toc] SRS population NNN sample size nnn estimate Yˉ\bar YYˉ estimated variance 1−fnS2\frac{1-f}{n}S^2n1−f​S2. stratum sampling cluster sampling">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-29T09:17:52.000Z">
-<meta property="article:modified_time" content="2022-10-29T11:13:55.655Z">
+<meta property="article:modified_time" content="2022-11-08T06:12:39.059Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="sampling-theory">
 <meta name="twitter:card" content="summary">
@@ -35,7 +37,7 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
+<meta name="generator" content="Hexo 6.3.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 <body>
   <div id="container">
@@ -94,11 +96,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p>[toc]</p>
+<h2 id="srs">SRS</h2>
+<p>population <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span></p>
+<p>sample size <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span></p>
+<p>estimate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>Y</mi><mo>ˉ</mo></mover></mrow><annotation encoding="application/x-tex">\bar Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8201099999999999em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8201099999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˉ</span></span></span></span></span></span></span></span></span></span> estimated variance <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mo>−</mo><mi>f</mi></mrow><mi>n</mi></mfrac><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1-f}{n}S^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.277216em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322159999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mathdefault mtight" style="margin-right:0.10764em;">f</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</p>
+<h2 id="stratum-sampling">stratum sampling</h2>
+<h2 id="cluster-sampling">cluster sampling</h2>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/29/2022-10-29-sampling-theory-review/" data-id="cla6twwcz0018a8ux7avt3nw7" data-title="sampling theory review" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/29/2022-10-29-sampling-theory-review/" data-id="clbd3ulx800151gux7a4r252o" data-title="sampling theory review" class="article-share-link">Share</a>
       
       
       
@@ -152,7 +161,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/complex-analysis/" style="font-size: 12.5px;">complex-analysis</a> <a href="/tags/linear-algebra/" style="font-size: 10px;">linear-algebra</a> <a href="/tags/mathematical-statistics/" style="font-size: 10px;">mathematical-statistics</a> <a href="/tags/nonparametric-statistics/" style="font-size: 15px;">nonparametric-statistics</a> <a href="/tags/optimization-method/" style="font-size: 17.5px;">optimization-method</a> <a href="/tags/probability-theory/" style="font-size: 15px;">probability-theory</a> <a href="/tags/regression-analysis/" style="font-size: 10px;">regression-analysis</a> <a href="/tags/sampling-theory/" style="font-size: 10px;">sampling-theory</a> <a href="/tags/stochastic-process/" style="font-size: 20px;">stochastic-process</a>
+      <a href="/tags/complex-analysis/" style="font-size: 13.33px;">complex-analysis</a> <a href="/tags/linear-algebra/" style="font-size: 10px;">linear-algebra</a> <a href="/tags/mathematical-statistics/" style="font-size: 10px;">mathematical-statistics</a> <a href="/tags/nonparametric-statistics/" style="font-size: 13.33px;">nonparametric-statistics</a> <a href="/tags/optimization-method/" style="font-size: 16.67px;">optimization-method</a> <a href="/tags/probability-theory/" style="font-size: 13.33px;">probability-theory</a> <a href="/tags/regression-analysis/" style="font-size: 10px;">regression-analysis</a> <a href="/tags/sampling-theory/" style="font-size: 10px;">sampling-theory</a> <a href="/tags/stochastic-process/" style="font-size: 20px;">stochastic-process</a>
     </div>
   </div>
 
@@ -161,7 +170,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li></ul>
     </div>
   </div>
 
@@ -172,6 +181,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/12/04/2022-12-04-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E5%A4%8D%E4%B9%A0/">复变函数复习</a>
+          </li>
         
           <li>
             <a href="/2022/11/07/2022-11-07-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98003/">每日一题003</a>
@@ -187,10 +200,6 @@
         
           <li>
             <a href="/2022/11/05/2022-11-05-SMW-formula/">SMW formula</a>
-          </li>
-        
-          <li>
-            <a href="/2022/11/05/2022-11-05-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98001/">每日一题001</a>
           </li>
         
       </ul>
